@@ -1,0 +1,15 @@
+Intelligent Customer Support Bot: Hello! Type 'quit' to exit.
+> hi
+Hello! How can I help you today?
+
+> I have an issue with my order
+I'm sorry to hear that. Could you please provide more information about the problem?
+
+> I want a refund
+Refunds can be requested via our refund portal. Would you like the link?
+
+> thank you
+You're welcome!
+
+> quit
+Goodbye! Have a great day.
