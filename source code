@@ -1,0 +1,55 @@
+import nltk
+import random
+import string
+
+from nltk.chat.util import Chat, reflections
+
+# Define pairs of inputs and responses
+pairs = [
+    [
+        r"(hi|hello|hey|good morning|good evening)",
+        ["Hello! How can I help you today?", "Hi there! How can I assist you?"]
+    ],
+    [
+        r"my name is (.*)",
+        ["Hello %1, how can I help you today?"]
+    ],
+    [
+        r"(.*) help (.*)",
+        ["Sure, I'm here to help. Can you please describe your issue in more detail?"]
+    ],
+    [
+        r"(.*) (problem|issue|error) (.*)",
+        ["I'm sorry to hear that. Could you please provide more information about the problem?"]
+    ],
+    [
+        r"(.*) refund (.*)",
+        ["Refunds can be requested via our refund portal. Would you like the link?"]
+    ],
+    [
+        r"(.*) (not working|doesn't work|broken) (.*)",
+        ["I understand your concern. Can you specify what is not working?"]
+    ],
+    [
+        r"thank you|thanks",
+        ["You're welcome!", "Glad I could help!"]
+    ],
+    [
+        r"bye|exit|quit",
+        ["Goodbye! Have a great day.", "Bye! Let me know if you need anything else."]
+    ],
+    [
+        r"(.*)",
+        ["I'm not sure I understand. Can you please rephrase?"]
+    ]
+]
+
+# Initialize chatbot
+def chatbot():
+    print("Intelligent Customer Support Bot: Hello! Type 'quit' to exit.")
+    chat = Chat(pairs, reflections)
+    chat.converse()
+
+# Run the chatbot
+if __name__ == "__main__":
+    chatbot()
